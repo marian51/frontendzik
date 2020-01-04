@@ -11,11 +11,8 @@
         <li class="nav-item" v-if="showAdminBoard">
           <a href="/admin" class="nav-link">Panel Admina</a>
         </li>
-        <li class="nav-item" v-if="showModeratorBoard">
-          <a href="/mod" class="nav-link">Moderator Board</a>
-        </li>
         <li class="nav-item">
-          <a href="/user" class="nav-link" v-if="currentUser">Uzytkownik</a>
+          <a href="/userBoard" class="nav-link" v-if="currentUser">Uzytkownik</a>
         </li>
       </div>
 
@@ -36,7 +33,7 @@
         <li class="nav-item">
           <a href="/profile" class="nav-link">
             <font-awesome-icon icon="user" />
-            {{currentUser.username}}
+            {{currentUser.userName}}
           </a>
         </li>
         <li class="nav-item">

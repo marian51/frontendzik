@@ -25,12 +25,10 @@ class AuthService {
       })
       .then(this.handleResponse)
       .then(response => {
-        if (response.data.accessToken) {
-
+        if (response.data.jwtToken) {
           localStorage.setItem('user', JSON.stringify(response.data));
         }
 
-		localStorage.setItem('user', JSON.stringify(response.data));
         return response.data;
       });
 		
@@ -59,7 +57,6 @@ class AuthService {
       const error = response.data && response.data.message;
       return Promise.reject(error);
     }
-
     return Promise.resolve(response);
   }
 }

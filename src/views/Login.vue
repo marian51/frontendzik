@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      user: new User('', ''),
+      user: new User('', '', ''),
       loading: false,
       message: ''
     };
